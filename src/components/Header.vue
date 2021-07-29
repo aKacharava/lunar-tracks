@@ -3,7 +3,7 @@
     <img src='../assets/img/logos/lunar-tracks.png' alt='' />
     <div class='title-container'>
       <h1>{{ title }}</h1>
-      <h3>Tuesday, 6 April</h3>
+      <h3>{{ dateBuilder() }}</h3>
     </div>
   </header>
 </template>
@@ -13,6 +13,20 @@ export default {
   name: 'Header',
   props: {
     title: String
+  },
+  methods: {
+    dateBuilder () {
+      const currentDate = new Date()
+      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+      const date = currentDate.getDate()
+      const day = days[currentDate.getDay()]
+      const month = months[currentDate.getMonth()]
+      const year = currentDate.getFullYear()
+
+      return `${day}, ${date} ${month} ${year}`
+    }
   }
 }
 </script>
@@ -29,6 +43,7 @@ header {
 
   img{
     max-width: 50%;
+    height: auto;
   }
   .title-container{
     text-align: end;
