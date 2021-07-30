@@ -1,7 +1,7 @@
 <template>
   <header>
     <img src="../assets/img/logos/lunar-tracks.png" alt="" />
-    <div class="title-container">
+    <div class="lt-title-container">
       <h1>{{ title }}</h1>
       <h3>{{ dateBuilder() }}</h3>
     </div>
@@ -52,7 +52,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 header {
   display: flex;
   flex-direction: row;
@@ -66,7 +66,7 @@ header {
     max-width: 50%;
     height: auto;
   }
-  .title-container {
+  .lt-title-container {
     text-align: end;
 
     h1 {
