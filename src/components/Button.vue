@@ -4,9 +4,9 @@
 
 <script>
 export default {
-  name: 'Button',
+  name: "Button",
   props: {
-    title: String
-  }
-}
+    title: String,
+  },
+};
 </script>

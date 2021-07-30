@@ -6,7 +6,8 @@
     },
     "extends": [
         "plugin:vue/essential",
-        "standard"
+        "standard",
+        "prettier"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -16,9 +17,12 @@
         "ecmaVersion": 2018
     },
     "plugins": [
-        "vue"
+        "vue",
+        "prettier"
     ],
     "rules": {
-        "prettier/prettier": ["error", { "endOfLine": "off" }]
+        "prettier/prettier": [
+            "error", { "endOfLine": "auto" }
+        ]
     }
 }
